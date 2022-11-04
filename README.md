@@ -1,6 +1,8 @@
 # HackaLOD
 HackaLOD 2022
 
+#### Symbolism Knowledge Graph
+
 #### Retrieving labels of symbols in English and Dutch
 
 We queried Wikidata to get labels of entities that represent symbols depicted on paintings [wikihyper.csv](https://github.com/cultural-ai/HackaLOD/blob/main/wikihyper.csv).
