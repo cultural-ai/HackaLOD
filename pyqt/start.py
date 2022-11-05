@@ -194,7 +194,7 @@ if __name__ == "__main__":
     
     # build concepts list
     concepts: list[str] = sorted(list(concept2context.keys()))
-
+    
     # ------
     # load a dataframe of artwork properties related to symbols
     # ------
