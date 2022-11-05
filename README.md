@@ -3,9 +3,9 @@ HackaLOD 2022
 
 ### Purpose
 
-Building a web app in which users can choose a context from a predefined list, and then explore a 3D exhibition in which the context is presented from different cultural contexts. For each cultural context, a series of artwork is presented to the user that contain a symbol of that concept.
+Building a web app in which users can choose a context from a predefined list, and then explore a 3D exhibition in which the context is presented from different cultural contexts. For each cultural context, a series of artwork is presented to the user that contain a symbol of that concept in the respective cultural context.
 
-### Dataset Used
+### Datasets Used
 
 #### Symbolism Knowledge Graph
 
