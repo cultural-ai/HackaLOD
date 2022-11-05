@@ -39,7 +39,7 @@ class Window(QtWidgets.QWidget):
         # box 1 - concept
         self.b1 = QtWidgets.QLineEdit(self.concept)
         layout.addWidget(self.b1)
-
+        
         # completer for box b1
         self.completer1 = QtWidgets.QCompleter(self.concepts, self.b1)
         self.completer1.setCaseSensitivity(QtCore.Qt.CaseSensitivity.CaseInsensitive)
@@ -47,6 +47,7 @@ class Window(QtWidgets.QWidget):
         self.completer1.setWidget(self.b1)
         self.completer1.activated.connect(self.handleCompletion1)
         self.b1.textChanged.connect(self.handleTextChanged1)
+        
         self.b1.returnPressed.connect(self.captureb1)
         self._completing = False
 
@@ -87,7 +88,6 @@ class Window(QtWidgets.QWidget):
         d = {}
         # if existing ... load
         if capture_fp.exists():
-
             with open(capture_fp, "r") as f:
                 d = json.load(f)
 
@@ -105,7 +105,7 @@ class Window(QtWidgets.QWidget):
         # ------
         self.c1.clear()
         self.c1.addItems(self.concept2context[self.concept])
-
+        
         # ------
         # update unity json
         # ------
@@ -134,7 +134,7 @@ class Window(QtWidgets.QWidget):
     def capturec1(self):
 
         self.context = self.c1.currentText()
-
+        
         # if existing ... load
         if capture_fp.exists():
 
@@ -177,7 +177,6 @@ if __name__ == "__main__":
         else:
             if contexts not in concept2context[concept]:
                 concept2context[concept].append(contexts)
-
     # build an index of (concept, context): symbols
     pair2symbols = defaultdict(list)
     for i, row in df_symbols_contexts_concepts.iterrows():
@@ -192,7 +191,7 @@ if __name__ == "__main__":
         else:
             if contexts not in concept2context[concept]:
                 pair2symbols[(concept, contexts)].append(symbol)
-
+    
     # build concepts list
     concepts: list[str] = sorted(list(concept2context.keys()))
 
@@ -206,7 +205,7 @@ if __name__ == "__main__":
     # ------
     capture_fp: pathlib.Path = pathlib.Path("capture.json")
     if capture_fp.exists() == False:
-        state = {"concept": "courage", "context": "roman"}
+        state = {"concept": "courage", "context": "grecoRoman"}
         with open(capture_fp, "w") as f:
             json.dump(state, f)
     else:
