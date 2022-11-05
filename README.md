@@ -11,17 +11,17 @@ HackaLOD 2022
 
 #### Retrieving labels of symbols in English and Dutch
 
-We used the symbols available in HyperReal to retrieve artworks that depict these objects using the following two sources:
+We used the symbols available in HyperReal to retrieve artworks that depict these symbols using the following two sources:
 1. WikiData
 2. The NMVW collection
 
 The NMVW collection contains artwork descriptions only in Dutch. Therefore, we translated all the symbols contained in HyperReal from English to Dutch. 
 
-To retrieve labels of entities in English and Dutch, we used MediaWiki API [see Jypiter notebook](https://github.com/cultural-ai/HackaLOD/blob/main/getting_wikidata_labels.ipynb). We queried Wikidata to get paintings depicted on paintings [wikihyper.csv](https://github.com/cultural-ai/HackaLOD/blob/main/wikihyper.csv). The resulting file with labels in two languages contain 2,691 entities. 191 entities did not have Dutch labels in Wikidata [qids_no_nl_labels.json](https://github.com/cultural-ai/HackaLOD/blob/main/qids_no_nl_labels.json), so we translated English labels into Dutch using Google Translate API. We also used the Google Translate API to translate the symbols in HyperReal that didn't exist in WikiData. Finally, we created a dataframe with symbols, both in Dutch and in English. 
+##### Linking HyperReal with WikiData
+To link HyperReal with WikiData, we queried WikiData to find symbols from HyperReal that are depicted in paintings in Wikidata, using the property "depicts" [wikihyper.csv](https://github.com/cultural-ai/HackaLOD/blob/main/wikihyper.csv). To retrieve the labels of these symbols in English and in Dutch, we used MediaWiki API [see Jypiter notebook](https://github.com/cultural-ai/HackaLOD/blob/main/getting_wikidata_labels.ipynb). The resulting file with labels in two languages contains 2,691 entities. 191 entities did not have Dutch labels in Wikidata [qids_no_nl_labels.json](https://github.com/cultural-ai/HackaLOD/blob/main/qids_no_nl_labels.json), so we translated English labels into Dutch using Google Translate API. 
 
 
+##### Linking HyperReal with the NMVW collection
+We also used the Google Translate API to translate the symbols in HyperReal that didn't exist in WikiData. Finally, we created a dataframe with symbols, both in Dutch and in English. We then used this dataframe of symbols to query NMVW using the dutch translation of the symbols.
 
-
-
-#### Querying the symbol labels in the NMVW collection
 
