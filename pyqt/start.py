@@ -160,14 +160,14 @@ if __name__ == "__main__":
 
     # load a dataframe of all symbol-concept-context triples
     df_symbols_contexts_concepts: pd.DataFrame = pd.read_csv(
-        "./data/hyperreal2.csv", encoding="latin1"
+        "./data/hyperreal_with_concept_labels.csv", encoding="latin1"
     )
 
     # build an index of concept: contexts
     concept2context = defaultdict(list)
     for i, row in df_symbols_contexts_concepts.iterrows():
 
-        concept = row["concept"]
+        concept = row["label"]
         contexts = row["contexts"]
 
         if " @ " in contexts:
@@ -182,7 +182,7 @@ if __name__ == "__main__":
     pair2symbols = defaultdict(list)
     for i, row in df_symbols_contexts_concepts.iterrows():
 
-        concept = row["concept"]
+        concept = row["label"]
         contexts = row["contexts"]
         symbol = row["symbol"]
 
