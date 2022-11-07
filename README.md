@@ -12,8 +12,8 @@ HackaLOD 2022
 #### Retrieving labels of symbols in English and Dutch
 
 We used the symbols available in HyperReal to retrieve artworks that depict these symbols using the following two sources:
-1. WikiData
-2. The NMVW collection
+1. [WikiData](https://query.wikidata.org)
+2. [The NMVW collection](https://collectie.wereldculturen.nl/thesaurus/#/query/fd2e81c3-dfc7-48cd-a195-f29b9b602382)
 
 The NMVW collection contains artwork descriptions only in Dutch. Therefore, we translated all the symbols contained in HyperReal from English to Dutch. 
 
