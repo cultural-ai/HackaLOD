@@ -40,7 +40,7 @@ select (COUNT(DISTINCT ?s) AS ?n) where {
 ```
 returns 27837 objects
 
-The filtered objects' URIs are [here](visual_art.csv).
+The filtered objects' URIs are [here](visual_art_objects.csv).
 
 Narrower terms of visual art are: 
 | term | PrefLabel | AltLabel |
