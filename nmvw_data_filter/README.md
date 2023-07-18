@@ -1,9 +1,9 @@
-/**Write the filtering steps here**/
+## NMWV Data Prepapration 
 
 The National Museum of Wereldculturen collection data can be found [here](https://collectie.wereldculturen.nl/thesaurus/#/query/d475fb2c-95cf-438d-9395-4823a7e16dbb).
 
 
-Filtering through "schilderkunst" or "painting"
+#### Filtering through "schilderkunst" or "painting"
 
 ```SPARQL
 PREFIX dc: <http://purl.org/dc/terms/>
@@ -21,7 +21,7 @@ returns 7751 object
 The filtered objects' URIs are [here](painting_objects.csv).
 
 
-Filtering through "beeldende kunst naar medium" or "visual arts by medium"
+#### Filtering through "beeldende kunst naar medium" or "visual arts by medium"
 
 Narrower terms of visual art are: 
 
